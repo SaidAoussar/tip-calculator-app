@@ -1,0 +1,154 @@
+.card {
+  background-color: $white;
+  border-radius: 22px 22px 0px 0px;
+
+  @include breakpoint-up(md) {
+    border-radius: 22px;
+  }
+
+  .input-container {
+    position: relative;
+    margin-bottom: 36px;
+
+    label {
+      font-size: 14px;
+      color: $darkGrayishCyan;
+    }
+
+    .label {
+      margin-bottom: 12px;
+    }
+
+    .input-icon {
+      .input {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        color: $veryDarkCyan;
+        text-align: right;
+        padding: 14px 18px;
+        background-color: #f3f8fb;
+        border: none;
+        border-radius: 8px;
+      }
+
+      img {
+        position: absolute;
+        left: 18px;
+        top: 55%;
+      }
+    }
+  }
+
+  .tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "five ten" "fifteen twenty-five" "fifty custom";
+    gap: 15px;
+
+    @include breakpoint-up(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "five ten fifteen" "twenty-five fifty custom";
+    }
+
+    input[type="number"]:disabled {
+      background-color: #dddddd;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + span {
+      background-color: $strongCayan;
+      color: $white;
+    }
+
+    span {
+      display: block;
+      color: $white;
+      text-align: center;
+      background-color: $veryDarkCyan;
+      padding: 14px 0px;
+      border-radius: 8px;
+
+      @include breakpoint-up(md) {
+      }
+    }
+  }
+
+  .custom-label {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .custom-input {
+    width: 100%;
+    color: $darkGrayishCyan;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #f3f8fb;
+    height: 100%;
+    padding-left: 20px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  &__second {
+    background-color: $veryDarkCyan;
+    border-radius: 16px;
+    padding: 46px 24px 24px;
+    .result-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:first-child {
+        margin-bottom: 32px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 38px;
+
+        @include breakpoint-up(md) {
+          margin-bottom: 130px;
+        }
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      color: $white;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: $grayishCyan;
+    }
+
+    .price {
+      font-size: 24px;
+      color: $strongCayan;
+
+      @include breakpoint-up(lg) {
+        font-size: 36px;
+      }
+    }
+
+    button {
+      font-size: 18px;
+      color: $veryDarkCyan;
+      font-weight: 700;
+      background-color: $strongCayan;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      padding: 20px 110px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+}
