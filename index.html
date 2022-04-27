@@ -28,7 +28,7 @@
   <body>
     <main>
       <div class="container">
-        <h1><div>splitter</div></h1>
+        <h1><span>splitter</span></h1>
         <div class="card">
           <div class="grid py">
             <div class="wrapper">
@@ -94,8 +94,9 @@
                     />
                     <span>50%</span>
                   </label>
-                  <label class="tip-custom">
+                  <label class="tip-custom" for="tip-custom">
                     <input
+                      id="tip-custom"
                       type="number"
                       placeholder="Custom"
                       min="0"
@@ -131,17 +132,17 @@
               <div class="card__second">
                 <div class="result-group">
                   <div>
-                    <h3 class="title">Tip Amount</h3>
-                    <h4 class="subtitle">/ person</h4>
+                    <h2 class="title">Tip Amount</h2>
+                    <h3 class="subtitle">/ person</h3>
                   </div>
-                  <h3 id="tipAmount" class="price">0</h3>
+                  <h2 id="tipAmount" class="price">0</h2>
                 </div>
                 <div class="result-group">
                   <div>
-                    <h3 class="title">Total</h3>
-                    <h4 class="subtitle">/ person</h4>
+                    <h2 class="title">Total</h2>
+                    <h3 class="subtitle">/ person</h3>
                   </div>
-                  <h3 id="total" class="price">0</h3>
+                  <h2 id="total" class="price">0</h2>
                 </div>
                 <button onclick="reset()">reset</button>
               </div>
