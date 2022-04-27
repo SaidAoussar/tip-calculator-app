@@ -1,0 +1,138 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+  background-color: $lightGrayishCyan;
+  height: 100vh;
+
+  @include breakpoint-down {
+    height: 140vh;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  padding: 0 32px;
+}
+
+.wrapper-light {
+  padding: 0 24px;
+}
+
+.container {
+  margin: 0px auto;
+  @include breakpoint-up(lg) {
+    max-width: 920px;
+  }
+}
+
+h1 {
+  margin-bottom: 44px;
+  text-align: center;
+
+  @include breakpoint-down {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  div {
+    font-size: 18px;
+    color: $veryDarkCyan;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 85px;
+    overflow-wrap: anywhere;
+    letter-spacing: 6px;
+  }
+}
+
+.py {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.grid {
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.tip {
+  &-five {
+    grid-area: five;
+  }
+  &-ten {
+    grid-area: ten;
+  }
+  &-fifteen {
+    grid-area: fifteen;
+  }
+  &-twenty-five {
+    grid-area: twenty-five;
+  }
+  &-fifty {
+    grid-area: fifty;
+  }
+
+  &-custom {
+    grid-area: custom;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--sb {
+    justify-content: space-between;
+  }
+}
+
+input[type="number"]:focus-visible {
+  outline-style: solid;
+  outline-color: $strongCayan;
+  outline-width: 2px;
+}
+
+.error {
+  outline-style: solid;
+  outline-color: #b67f6a;
+  outline-width: 2px;
+}
+.error-text {
+  color: #b67f6a;
+}
+
+.hide {
+  display: none;
+}
