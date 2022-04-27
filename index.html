@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1><div>splitter</div></h1>
+        <div class="card">
+          <div class="grid py">
+            <div class="wrapper">
+              <div class="input-container">
+                <label for="bill" class="label">Bill</label>
+                <div class="input-icon">
+                  <input
+                    type="number"
+                    id="bill"
+                    class="w-100 input input-icon"
+                    value="0"
+                    onkeyup="onKeyupBillInput()"
+                    onchange="onChangeBillInput()"
+                  />
+                  <img src="./images/icon-dollar.svg" alt="icon-dollar" />
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="tip" class="custom-label">Select Tip %</label>
+                <div class="tips">
+                  <label class="tip-five">
+                    <input
+                      type="checkbox"
+                      value="5"
+                      name="tip"
+                      onclick="checkOne(this)"
+                    />
+                    <span>5%</span>
+                  </label>
+                  <label class="tip-ten">
+                    <input
+                      type="checkbox"
+                      value="10"
+                      name="tip"
+                      onclick="checkOne(this)"
+                    />
+                    <span>10%</span>
+                  </label>
+                  <label class="tip-fifteen">
+                    <input
+                      type="checkbox"
+                      value="15"
+                      name="tip"
+                      onclick="checkOne(this)"
+                    />
+                    <span>15%</span>
+                  </label>
+                  <label class="tip-twenty-five">
+                    <input
+                      type="checkbox"
+                      value="25"
+                      name="tip"
+                      onclick="checkOne(this)"
+                    />
+                    <span>25%</span>
+                  </label>
+                  <label class="tip-fifty">
+                    <input
+                      type="checkbox"
+                      value="50"
+                      name="tip"
+                      onclick="checkOne(this)"
+                    />
+                    <span>50%</span>
+                  </label>
+                  <label class="tip-custom">
+                    <input
+                      type="number"
+                      placeholder="Custom"
+                      min="0"
+                      class="custom-input"
+                      onkeyup="onKeyupCustomTipInput()"
+                      onchange="onChangeCustomTipInput()"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="input-container">
+                <label for="number-people" class="label flex flex--sb">
+                  <span>Number of People</span>
+                  <span id="message" class="error-text hide"
+                    >Can't be zero
+                  </span>
+                </label>
+                <div class="input-icon">
+                  <input
+                    type="number"
+                    id="number-people"
+                    class="w-100 input"
+                    value="1"
+                    min="1"
+                    onKeyup="onKeyupNbrPeople()"
+                    onchange="onChangeNbrPeople()"
+                  />
+                  <img src="./images/icon-person.svg" alt="icon-person" />
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-light">
+              <div class="card__second">
+                <div class="result-group">
+                  <div>
+                    <h3 class="title">Tip Amount</h3>
+                    <h4 class="subtitle">/ person</h4>
+                  </div>
+                  <h3 id="tipAmount" class="price">0</h3>
+                </div>
+                <div class="result-group">
+                  <div>
+                    <h3 class="title">Total</h3>
+                    <h4 class="subtitle">/ person</h4>
+                  </div>
+                  <h3 id="total" class="price">0</h3>
+                </div>
+                <button onclick="reset()">reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://saidaoussar.tech/">Said Aoussar</a>.
+    </div>
+    <script src="./app/js/app.js"></script>
+  </body>
+</html>
